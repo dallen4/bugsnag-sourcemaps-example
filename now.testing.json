@@ -1,0 +1,25 @@
+{
+    "name": "bugsnag-sourcemaps-example",
+    "version": 2,
+    "build": {
+        "env": {
+            "NODE_ENV": "testing",
+            "API_URI": "https://localhost:3000",
+            "BUGSNAG_API_KEY": "REPLACE",
+            "COOKIE_DOMAIN": "elevator.now.sh"
+        }
+    },
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/next",
+            "config": { "maxLambdaSize": "10mb" }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/static/.+",
+            "headers": { "cache-control": "maxage=604800" }
+        }
+    ]
+}

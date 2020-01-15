@@ -1,0 +1,29 @@
+{
+  "name": "bugsnag-sourcemaps-example",
+  "version": "1.0.0",
+  "description": "Project to reproduce sourcemap upload errors for bugsnag",
+  "main": "index.js",
+
+  "scripts": {
+      "setup": "yarn global add now",
+      "start": "now dev",
+      "build": "next build",
+      "deploy": "now --prod --local-config now.testing.json"
+  },
+  "author": "Nieky Allen",
+  "license": "None",
+  "private": false,
+  "dependencies": {
+    "@bugsnag/js": "^6.4.3",
+    "@bugsnag/plugin-react": "^6.4.0",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-source-maps": "^0.0.3",
+    "next": "^9.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "webpack-bugsnag-plugins": "^1.4.2"
+  }
+}
