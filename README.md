@@ -10,4 +10,5 @@ To run locally:
 
 Deploy:
 - you will need a Now account to sign into the `now` cli and deploy the project
+- you will need a Bugsnag account and have to have created a project then replace the value in `now.testing.json` config for `BUGSNAG_API_KEY` (do not commit, look into `now` secrets for secure implementations)
 - run `yarn deploy`
