@@ -24,7 +24,7 @@ module.exports = withSourceMaps(
                     new BugsnagSourceMapUploaderPlugin({
                         apiKey: process.env.BUGSNAG_API_KEY,
                         appVersion: require('./package.json').version,
-                        publicPath: `https://bugsnag-sourcemaps-example.elevator.now.sh/_next/static/${buildId}/`,
+                        publicPath: `https://bugsnag-sourcemaps-example.now.sh/_next/static/${buildId}/`,
                         releaseStage:
                             process.env.COOKIE_DOMAIN !== 'localhost'
                                 ? 'production'
