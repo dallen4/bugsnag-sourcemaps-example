@@ -5,8 +5,7 @@
         "env": {
             "NODE_ENV": "testing",
             "API_URI": "https://localhost:3000",
-            "BUGSNAG_API_KEY": "REPLACE",
-            "COOKIE_DOMAIN": "elevator.now.sh"
+            "BUGSNAG_API_KEY": "REPLACE"
         }
     },
     "builds": [
