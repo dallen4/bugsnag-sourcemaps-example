@@ -1,12 +1,11 @@
 // require('dotenv').config();
 const withCSS = require('@zeit/next-css');
-const withSourceMaps = require('@zeit/next-source-maps');
+const withSourceMaps = require('@zeit/next-source-maps')();
 const { BugsnagSourceMapUploaderPlugin } = require('webpack-bugsnag-plugins');
 
 const env = {
     apiUri: process.env.API_URI,
     bugsnagApiKey: process.env.BUGSNAG_API_KEY,
-    cookieDomain: process.env.COOKIE_DOMAIN,
 };
 
 module.exports = withSourceMaps(
