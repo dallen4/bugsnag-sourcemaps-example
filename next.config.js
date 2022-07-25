@@ -13,7 +13,7 @@ module.exports = withSourceMaps(
         target: 'serverless',
         env,
         webpack(config, options) {
-            const { dev, isServer, buildId } = options;
+            const { dev, isServer } = options;
             if (isServer) {
                 config.devtool = 'source-map';
             }
@@ -23,7 +23,7 @@ module.exports = withSourceMaps(
                     new BugsnagSourceMapUploaderPlugin({
                         apiKey: process.env.BUGSNAG_API_KEY,
                         appVersion: require('./package.json').version,
-                        publicPath: `https://bugsnag-sourcemaps-example.now.sh/_next/static/${buildId}/`,
+                        publicPath: 'https://bugsnag-sourcemaps-example.now.sh/_next/',
                         releaseStage:
                             process.env.COOKIE_DOMAIN !== 'localhost'
                                 ? 'production'
